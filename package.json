@@ -1,0 +1,22 @@
+{
+  "name": "mongoose-paginate-async-await",
+  "version": "1.0.0",
+  "description": "Pagination async-await plugin for Mongoose",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AjAy-Gadhwal/mongoose-paginate-async-await.git"
+  },
+  "keywords": [
+    "pagination"
+  ],
+  "author": "AjAy Gadhwal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AjAy-Gadhwal/mongoose-paginate-async-await/issues"
+  },
+  "homepage": "https://github.com/AjAy-Gadhwal/mongoose-paginate-async-await#readme"
+}
