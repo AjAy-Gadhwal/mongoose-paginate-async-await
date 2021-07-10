@@ -2,21 +2,42 @@
   "name": "mongoose-paginate-async-await",
   "version": "1.0.0",
   "description": "Pagination async-await plugin for Mongoose",
+  "author": "AjAy Gadhwal <ajaygadhwal1@gmail.com>",
+  "contributors": [
+    "AjAy Gadhwal <ajaygadhwal1@gmail.com>"
+  ],
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha tests/*.js -R spec --ui bdd --timeout 5000"
   },
+  "keywords": [
+    "mongoose",
+    "paginate",
+    "pagination",
+    "mongoose-pagination",
+    "mongoose-pagination-async-await",
+    "paging",
+    "page"
+  ],
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "3.4.1",
+    "mocha": "^9.0.2",
+    "mongoose": "^5.13.2"
+  },
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AjAy-Gadhwal/mongoose-paginate-async-await.git"
-  },
-  "keywords": [
-    "pagination"
-  ],
-  "author": "AjAy Gadhwal",
-  "license": "ISC",
+  },  
   "bugs": {
     "url": "https://github.com/AjAy-Gadhwal/mongoose-paginate-async-await/issues"
   },
-  "homepage": "https://github.com/AjAy-Gadhwal/mongoose-paginate-async-await#readme"
+  "homepage": "https://github.com/AjAy-Gadhwal/mongoose-paginate-async-await#readme",
+  "directories": {
+    "test": "tests"
+  }
 }
