@@ -4,10 +4,6 @@
 I used the reference of [mongoose-paginate](https://www.npmjs.com/package/mongoose-paginate) library and this library has some node version-related issues. Because of it, I rewrited all code using "async, await", optimize code, and changed parameters.
 
 > Pagination plugin for [Mongoose](http://mongoosejs.com)
-
-=======
-[![NPM](https://nodei.co/npm/mongoose-paginate.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/mongoose-paginate/)
-
 ## Installation
 
 ```sh
@@ -28,6 +24,8 @@ schema.plugin(mongoosePaginate);
 var Model = mongoose.model('Model',  schema); // Model.paginate()
 ```
 
+### await Model.paginate([query], [options])
+#### OR
 ### Model.paginate([query], [options], [callback])
 
 **Parameters**
@@ -57,23 +55,19 @@ Promise fulfilled with object having properties:
 
 #### Skip 20 documents and return 10 documents
 
+With async/await:
 ```js
-Model.paginate({}, { page: 3, perPage: 10 }, function(err, result) {
-  // result.data
-  // result.documents
-  // result.perPage - 10
-  // result.page - 3
-  // result.pages
-});
+const result = await Model.paginate({}, { page: 3, perPage: 10 });
 ```
 
+With callback function:
+```js
+Model.paginate({}, { page: 3, perPage: 10 }, function(err, result) {});
+```
 
 With promise:
-
 ```js
-Model.paginate({}, { page: 3, perPage: 10 }).then(function(result) {
-  // ...
-});
+Model.paginate({}, { page: 3, perPage: 10 }).then(function(result) {});
 ```
 
 #### More advanced example
@@ -89,9 +83,7 @@ var options = {
   perPage: 10
 };
 
-Book.paginate(query, options).then(function(result) {
-  // ...
-});
+const result = await Model.paginate({}, { page: 3, perPage: 10 });
 ```
 
 #### Set custom default options for all queries
@@ -106,23 +98,6 @@ mongoosePaginate.paginate.options = {
   perPage: 20
 };
 ```
-
-controller.js:
-
-```js
-Model.paginate().then(function(result) {
-  // result.data - array of plain javascript objects
-  // result.perPage - 20
-});
-```
-
-## Tests
-
-```sh
-npm install
-npm test
-```
-
 ## License
 
 [MIT](LICENSE)
