@@ -1,6 +1,6 @@
 {
   "name": "mongoose-paginate-async-await",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Pagination async-await plugin for Mongoose",
   "author": "AjAy Gadhwal <ajaygadhwal1@gmail.com>",
   "contributors": [

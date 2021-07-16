@@ -16,7 +16,7 @@ Add plugin to a schema and then use model `paginate` method:
 
 ```js
 var mongoose = require('mongoose');
-var pagination = require('mongoose-paginate-async-await');
+var mongoosePaginate = require('mongoose-paginate-async-await');
 
 var schema = new mongoose.Schema({ /* schema definition */ });
 schema.plugin(mongoosePaginate);
